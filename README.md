@@ -3,6 +3,7 @@
 LoadingIndicator.swift - Helps in presenting loading indicator across the application in a easy way.
 
 Methods:
+
     - func showOnWindow(loadingIndicatorText: String? = nil)
       Usage : LoadingIndicator.sharedInstance.showOnWindow(loadingIndicatorText: "Please wait...")
         
