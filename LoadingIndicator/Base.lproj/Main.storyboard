@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eIf-gL-mCQ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Loading Indicator-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoadingIndicator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAQ-f7-tQ3">
+                                <rect key="frame" x="94" y="124" width="204" height="30"/>
+                                <state key="normal" title="Show indicator on full window"/>
+                                <connections>
+                                    <action selector="showOnWindow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oLD-n6-jSR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCq-Tb-n3e">
+                                <rect key="frame" x="82" y="185" width="228" height="30"/>
+                                <state key="normal" title="Show indicator on view controller"/>
+                                <connections>
+                                    <action selector="showOnController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJu-et-j4f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oD-t5-kkV">
+                                <rect key="frame" x="90" y="254" width="220" height="30"/>
+                                <state key="normal" title="Show indicator on custom view"/>
+                                <connections>
+                                    <action selector="showOnView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AaL-4s-jYH"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auo-5K-vzv">
+                                <rect key="frame" x="82" y="388" width="258" height="226"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H36-Fi-vYQ">
+                                <rect key="frame" x="180" y="314" width="32" height="30"/>
+                                <state key="normal" title="Hide"/>
+                                <connections>
+                                    <action selector="hide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="InD-TG-1hQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4oD-t5-kkV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="3mW-CL-1WW"/>
+                            <constraint firstItem="4oD-t5-kkV" firstAttribute="centerX" secondItem="H36-Fi-vYQ" secondAttribute="centerX" constant="4" id="4Nw-xp-BJD"/>
+                            <constraint firstItem="mAQ-f7-tQ3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="EGh-kz-sMH"/>
+                            <constraint firstItem="4oD-t5-kkV" firstAttribute="top" secondItem="gCq-Tb-n3e" secondAttribute="bottom" constant="39" id="JFW-EW-a9P"/>
+                            <constraint firstItem="gCq-Tb-n3e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="QiN-gS-OIg"/>
+                            <constraint firstItem="auo-5K-vzv" firstAttribute="top" secondItem="H36-Fi-vYQ" secondAttribute="bottom" constant="44" id="ThN-QY-CkB"/>
+                            <constraint firstItem="mAQ-f7-tQ3" firstAttribute="centerX" secondItem="gCq-Tb-n3e" secondAttribute="centerX" id="WM7-yV-e9W"/>
+                            <constraint firstItem="gCq-Tb-n3e" firstAttribute="top" secondItem="mAQ-f7-tQ3" secondAttribute="bottom" constant="31" id="Zzn-sM-hat"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="auo-5K-vzv" secondAttribute="bottom" constant="248" id="cGw-vY-hSt"/>
+                            <constraint firstItem="auo-5K-vzv" firstAttribute="leading" secondItem="gCq-Tb-n3e" secondAttribute="leading" id="jmT-cz-VdX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="auo-5K-vzv" secondAttribute="trailing" constant="74" id="u89-Zt-dAO"/>
+                            <constraint firstItem="gCq-Tb-n3e" firstAttribute="centerX" secondItem="4oD-t5-kkV" secondAttribute="centerX" constant="-4" id="vYb-MD-wq8"/>
+                            <constraint firstItem="H36-Fi-vYQ" firstAttribute="top" secondItem="4oD-t5-kkV" secondAttribute="bottom" constant="30" id="zKC-yK-vJW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Loading Indicator" id="XXy-2t-2zZ"/>
+                    <connections>
+                        <outlet property="customView" destination="auo-5K-vzv" id="KKI-RG-Hc1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="m4Q-10-dRK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eIf-gL-mCQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UDb-yj-nY8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lSO-BG-ZSa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ppo-qN-5hz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="-536.38392857142856"/>
+        </scene>
+    </scenes>
+</document>
