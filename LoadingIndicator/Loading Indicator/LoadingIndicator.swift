@@ -107,7 +107,7 @@ class LoadingIndicator: UIView {
             // Set to UIScreen window size and position
             strongSelf.frame = UIScreen.main.bounds
             strongSelf.activityIndicator.frame = UIScreen.main.bounds
-            strongSelf.setLoadingIndicatorLabel(text: loadingIndicatorText!)
+            strongSelf.setLoadingIndicatorLabel(text: loadingIndicatorText ?? "")
         
             currentMainWindow.addSubview(strongSelf)
             if strongSelf.loadingIndicatorType.hashValue != LoadingIndicatorType.secondary.hashValue {
@@ -133,7 +133,7 @@ class LoadingIndicator: UIView {
             // Set to presenter size and position
             strongSelf.frame = presenter.view.bounds
             strongSelf.activityIndicator.frame = presenter.view.bounds
-            strongSelf.setLoadingIndicatorLabel(text: loadingIndicatorText!)
+            strongSelf.setLoadingIndicatorLabel(text: loadingIndicatorText ?? "")
             presenter.view.addSubview(strongSelf)
             if strongSelf.loadingIndicatorType.hashValue != LoadingIndicatorType.secondary.hashValue {
                 strongSelf.activityIndicator.startAnimating()
@@ -160,7 +160,7 @@ class LoadingIndicator: UIView {
             // Set to presenter size and position
             strongSelf.frame = presenter.bounds
             strongSelf.activityIndicator.frame = presenter.bounds
-            strongSelf.label.text = loadingIndicatorText
+            strongSelf.label.text = loadingIndicatorText ?? ""
             presenter.addSubview(strongSelf)
             
             if strongSelf.loadingIndicatorType.hashValue != LoadingIndicatorType.secondary.hashValue {
